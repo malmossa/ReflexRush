@@ -1,0 +1,344 @@
+/* =========================================================
+    GAME PAGE
+    Main full-screen game container and background.
+    Layout utilities such as min-height and positioning are
+    handled by Bootstrap in Game.razor.
+   ========================================================= */
+
+.game-page {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+    LOGO
+    Controls the Reflex Rush logo size and shadow.
+    Positioning is handled by Bootstrap.
+   ========================================================= */
+
+.game-logo {
+    width: 230px;
+    height: auto;
+    filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.8));
+}
+
+
+/* =========================================================
+    STATS PANEL
+    Score, streak, targets hit, and missed.
+    Flexbox, positioning, spacing, and padding are handled
+    by Bootstrap.
+   ========================================================= */
+
+.stats-panel {
+    background: rgba(3, 15, 43, 0.88);
+    border: 1px solid rgba(0, 119, 255, 0.35);
+
+    box-shadow:
+        0 0 20px rgba(0, 102, 255, 0.15),
+        inset 0 0 20px rgba(0, 102, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+/* Gives each statistic enough horizontal space. */
+.stat-item {
+    min-width: 105px;
+}
+
+.stat-icon {
+    font-size: 2.25rem;
+}
+
+.stat-label {
+    color: #c9d2f0;
+    font-size: 1rem;
+    line-height: 1.1;
+
+    /* Prevents labels such as "Targets Hit" from wrapping. */
+    white-space: nowrap;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Vertical separator between each statistic. */
+.stat-divider {
+    width: 1px;
+    height: 55px;
+    margin: 0 14px;
+    background: rgba(0, 132, 255, 0.35);
+}
+
+
+/* Individual statistic colors */
+
+.score-icon,
+.score-value {
+    color: #ffb800;
+}
+
+.streak-icon,
+.streak-value {
+    color: #ff2855;
+}
+
+.hit-icon,
+.hit-value {
+    color: #00d9ff;
+}
+
+.missed-icon,
+.missed-value {
+    color: #ff3158;
+}
+
+
+/* =========================================================
+    TIMER
+    Countdown timer displayed in the top-right corner.
+    Positioning and spacing are handled by Bootstrap.
+   ========================================================= */
+
+.timer-panel {
+    width: 200px;
+    background: rgba(3, 15, 43, 0.88);
+    border: 1px solid rgba(0, 119, 255, 0.5);
+
+    box-shadow:
+        0 0 20px rgba(0, 102, 255, 0.15),
+        inset 0 0 20px rgba(0, 102, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.timer-icon {
+    font-size: 2.25rem;
+    color: #168cff;
+}
+
+.timer-label {
+    color: #00e5e5;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.timer-value {
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.65);
+}
+
+/* Bootstrap progress component customized for the timer. */
+.timer-progress {
+    height: 10px;
+    background: rgba(0, 71, 153, 0.45);
+}
+
+.timer-progress-bar {
+    background: #12cbea;
+}
+
+
+/* =========================================================
+    GAME AREA
+    Reserved exclusively for playable targets.
+    We will define its safe boundaries before adding the
+    random target-positioning logic.
+   ========================================================= */
+
+.game-area {
+    position: absolute;
+
+    /* Leave room for the top HUD. */
+    top: 160px;
+
+    /* Leave room for the bottom controls. */
+    bottom: 160px;
+
+    /* Small safety space on the left and right. */
+    left: 30px;
+    right: 30px;
+}
+
+
+/* =========================================================
+    HOW TO PLAY
+    Instruction panel displayed in the bottom-left corner.
+    Layout and spacing are mostly handled by Bootstrap.
+   ========================================================= */
+
+.instructions-panel {
+    background: rgba(3, 15, 43, 0.88);
+    border: 1px solid rgba(0, 119, 255, 0.4);
+
+    box-shadow:
+        0 0 20px rgba(0, 102, 255, 0.15),
+        inset 0 0 20px rgba(0, 102, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+}
+
+.instructions-help-icon {
+    font-size: 1.5rem;
+    color: #168cff;
+}
+
+.instructions-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.instruction-item {
+    color: #d8def5;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.instruction-icon {
+    font-size: 1.5rem;
+}
+
+/* Individual instruction icon colors. */
+
+.target-instruction {
+    color: #ff1493;
+}
+
+.score-instruction {
+    color: #ffb800;
+}
+
+.speed-instruction {
+    color: #00d9ff;
+}
+
+.instruction-arrow {
+    font-size: 1.5rem;
+    color: #8ea5d8;
+}
+
+
+/* =========================================================
+    START GAME BUTTON
+    Main game action displayed in the bottom-right corner.
+    Positioning and spacing are handled by Bootstrap.
+   ========================================================= */
+
+.start-button {
+    min-width: 250px;
+
+    background: linear-gradient(135deg, #168cff, #006ee6);
+    border: 2px solid #16e0ff;
+
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 0 12px rgba(0, 217, 255, 0.8),
+        0 0 30px rgba(0, 119, 255, 0.5);
+
+    /* Smooth transition when the button is hovered. */
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.start-button:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #25a4ff, #087cff);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 16px rgba(0, 217, 255, 1),
+        0 0 40px rgba(0, 119, 255, 0.7);
+}
+
+.start-icon {
+    font-size: 2rem;
+}
+
+
+/* =========================================================
+    TARGETS
+    Base design shared by every target.
+    currentColor allows each target to use the same design
+    while receiving its own color.
+   ========================================================= */
+
+.target {
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    border: 10px solid currentColor;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    /* Creates the bullseye rings. */
+    background:
+        radial-gradient(
+            circle,
+            currentColor 0 15%,
+            transparent 16% 31%,
+            currentColor 32% 47%,
+            transparent 48% 63%,
+            currentColor 64% 100%
+        );
+
+    /* Creates the neon glow around the target. */
+    box-shadow:
+        0 0 15px currentColor,
+        0 0 35px currentColor;
+}
+
+
+/* =========================================================
+    TEMPORARY TARGET POSITIONS
+    These are only for designing/testing the interface.
+    Later C# will generate random target positions.
+   ========================================================= */
+
+.target-pink {
+    color: #ff1493;
+    top: 25%;
+    left: 34%;
+}
+
+.target-cyan {
+    color: #00d9ff;
+    top: 38%;
+    left: 62%;
+}
+
+.target-orange {
+    color: #ff9d00;
+    top: 55%;
+    left: 15%;
+}
+
+.target-purple {
+    color: #b832ff;
+    top: 68%;
+    left: 46%;
+}
+
+.target-green {
+    color: #00e83a;
+    top: 58%;
+    right: 10%;
+}

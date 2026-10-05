@@ -38,3 +38,5 @@ C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\refint\ReflexRush.dll
 C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\ReflexRush.pdb
 C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\ReflexRush.genruntimeconfig.cache
 C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\ref\ReflexRush.dll
+C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\ReflexRush.sourcelink.json
+C:\Users\malmo\ReflexRush\ReflexRush\obj\Debug\net10.0\compressed\cbwdv99567-{0}-3wolj5mxd2-3wolj5mxd2.gz

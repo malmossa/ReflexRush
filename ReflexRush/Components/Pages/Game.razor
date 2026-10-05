@@ -2,66 +2,150 @@
 
 <PageTitle>Reflex Rush</PageTitle>
 
-<div class="game-page">
+<div class="game-page min-vh-100 position-relative overflow-hidden">
 
-    <header class="game-header">
-        <img src="images/logo.png"
-             alt="Reflex Rush"
-             class="game-logo" />
+    @* ==================== HEADER ==================== *@
+
+    <!-- Logo -->
+    <header class="game-header position-absolute top-0 start-0 mt-4 ms-4 z-3">
+        <img src="images/logo.png" alt="Reflex Rush" class="game-logo" />
     </header>
 
-    <div class="stats-panel">
 
-        <div class="stat">
-            <span class="stat-label">Score</span>
-            <span class="stat-value">120</span>
+    <!-- Game Statistics -->
+    <div class="stats-panel position-absolute top-0 start-50 translate-middle-x
+                d-flex align-items-center mt-4 px-3 py-3 rounded-4 z-3">
+
+        <!-- Score -->
+        <div class="stat-item d-flex align-items-center gap-3">
+            <i class="bi bi-trophy-fill stat-icon score-icon"></i>
+
+            <div class="d-flex flex-column">
+                <span class="stat-label">Score</span>
+                <span class="stat-value score-value">120</span>
+            </div>
         </div>
 
-        <div class="stat">
-            <span class="stat-label">Streak</span>
-            <span class="stat-value">5</span>
+        <div class="stat-divider"></div>
+
+        <!-- Streak -->
+        <div class="stat-item d-flex align-items-center gap-3">
+            <i class="bi bi-fire stat-icon streak-icon"></i>
+
+            <div class="d-flex flex-column">
+                <span class="stat-label">Streak</span>
+                <span class="stat-value streak-value">5</span>
+            </div>
         </div>
 
-        <div class="stat">
-            <span class="stat-label">Targets Hit</span>
-            <span class="stat-value">12</span>
+        <div class="stat-divider"></div>
+
+        <!-- Targets Hit -->
+        <div class="stat-item d-flex align-items-center gap-3">
+            <i class="bi bi-bullseye stat-icon hit-icon"></i>
+
+            <div class="d-flex flex-column">
+                <span class="stat-label">Targets Hit</span>
+                <span class="stat-value hit-value">12</span>
+            </div>
         </div>
 
-        <div class="stat">
-            <span class="stat-label">Missed</span>
-            <span class="stat-value">1</span>
+        <div class="stat-divider"></div>
+
+        <!-- Missed -->
+        <div class="stat-item d-flex align-items-center gap-3">
+            <i class="bi bi-x-circle-fill stat-icon missed-icon"></i>
+
+            <div class="d-flex flex-column">
+                <span class="stat-label">Missed</span>
+                <span class="stat-value missed-value">1</span>
+            </div>
         </div>
 
     </div>
 
-    <div class="timer-panel">
 
-      <span class="timer-label">Time Left</span>
-      <span class="timer-value">00:28</span>
+    <!-- Countdown Timer -->
+    <div class="timer-panel position-absolute top-0 end-0 mt-4 me-4
+                px-3 py-3 rounded-4 z-3">
+
+        <div class="d-flex align-items-center gap-3">
+
+            <i class="bi bi-stopwatch timer-icon"></i>
+
+            <div class="d-flex flex-column">
+                <span class="timer-label">Time Left</span>
+                <span class="timer-value">00:28</span>
+            </div>
+
+        </div>
+
+        <!-- Timer Progress -->
+        <div class="progress timer-progress mt-2">
+            <div class="progress-bar timer-progress-bar" style="width: 75%">
+            </div>
+        </div>
+
+    </div>
+
+
+    @* ==================== GAME AREA ==================== *@
+
+    <!-- Targets appear only inside this playable area -->
+    <main class="game-area">
+
+        <div class="target target-pink"></div>
+        <div class="target target-cyan"></div>
+        <div class="target target-orange"></div>
+        <div class="target target-purple"></div>
+        <div class="target target-green"></div>
+
+    </main>
+
+
+    @* ==================== BOTTOM CONTROLS ==================== *@
+
+    <!-- How to Play -->
+    <div class="instructions-panel position-absolute bottom-0 start-0
+                mb-4 ms-4 px-3 py-3 rounded-4 z-3">
+
+        <div class="d-flex align-items-center gap-2 mb-3">
+            <i class="bi bi-question-circle-fill instructions-help-icon"></i>
+            <h2 class="instructions-title m-0">How to Play</h2>
+        </div>
+
+        <div class="d-flex align-items-center gap-3">
+
+            <div class="instruction-item d-flex align-items-center gap-3">
+                <i class="bi bi-bullseye instruction-icon target-instruction"></i>
+                <span>Click the<br />targets</span>
+            </div>
+
+            <i class="bi bi-chevron-right instruction-arrow"></i>
+
+            <div class="instruction-item d-flex align-items-center gap-3">
+                <i class="bi bi-lightning-fill instruction-icon score-instruction"></i>
+                <span>Get a higher<br />score</span>
+            </div>
+
+            <i class="bi bi-chevron-right instruction-arrow"></i>
+
+            <div class="instruction-item d-flex align-items-center gap-3">
+                <i class="bi bi-speedometer2 instruction-icon speed-instruction"></i>
+                <span>They appear<br />faster each round</span>
+            </div>
+
+        </div>
 
     </div>
 
-    <div class="game-area">
 
-      <div class="target target-pink"></div>
-      <div class="target target-cyan"></div>
-      <div class="target target-orange"></div>
-      <div class="target target-purple"></div>
-      <div class="target target-green"></div>
+    <!-- Start Game -->
+    <button class="btn start-button position-absolute bottom-0 end-0 mb-4 me-4 d-flex align-items-center gap-3 px-4 py-3 rounded-4 z-3">
 
-      <div class="instructions-panel">
-        <h2>How to Play</h2>
+        <i class="bi bi-play-fill start-icon"></i>
+        <span>Start Game</span>
 
-        <p>Click the targets</p>
-        <p>Get a higher score</p>
-        <p>They appear faster each round</p>
-      </div>
-
-      <button class="btn start-button">
-          <i class="bi bi-play-fill"></i>
-          Start Game
-      </button>
-
-    </div>
+    </button>
 
 </div>
