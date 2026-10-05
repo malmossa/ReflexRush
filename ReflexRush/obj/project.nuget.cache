@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C1xWbljscPU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\malmo\\ReflexRush\\ReflexRush\\ReflexRush.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\malmo\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.12\\microsoft.aspnetcore.app.internal.assets.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
